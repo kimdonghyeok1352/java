@@ -69,7 +69,7 @@ public class A01 {
 	}
 }
 */
-interface Cal {
+/*interface Cal {
 	int total(int a, int b); // a부터 b까지의 합 리턴
 
 	int big(int a, int b);
@@ -116,4 +116,22 @@ class Calcu implements Cal {
 
 	}
 
+}*/
+class Th extends Thread{
+	String str;
+	Th(String str){
+		this.str=str;
+	}
+	public void run() {
+		System.out.println(str);
+	}
+}
+public class A01 {
+
+	public static void main(String[] args) {
+		Th t = new Th("쓰레드 1");
+		Thread th = new Thread(t);
+		th.start();
+
+	}
 }
