@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
+/*
 class Cook {// 요리쓰레드
 	String food;
 	boolean send = false;
@@ -66,4 +67,53 @@ public class A01 {
 			c3.join();
 		}catch(Exception e) {}
 	}
+}
+*/
+interface Cal {
+	int total(int a, int b); // a부터 b까지의 합 리턴
+
+	int big(int a, int b);
+	 // a,b중 큰 값 리턴
+
+	int hap();
+
+	void big();
+}
+class Calcu implements Cal {
+		int a, b;
+		int sum = 0;
+
+		Calcu(int a, int b) {
+			this.a = a;
+			this.b = b;
+		}
+
+	public int hap() {
+		for (int i = a; i <= b; i++) {
+			sum += i;
+			 
+		}
+		return sum;
+	}
+
+		public void big() {
+			if (a > b) {
+				System.out.println(a);
+			} else {
+				System.out.println(b);
+			}
+		}
+	}
+
+	public class A01 {
+
+	public static void main(String[] args) {
+		Calcu cc = new Calcu(1,5);
+
+		System.out.println(cc.hap());
+
+		cc.big();
+
+	}
+
 }
