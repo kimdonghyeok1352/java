@@ -1,4 +1,9 @@
 
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.ByteArrayInputStream;
@@ -14,52 +19,33 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Scanner;
 
-abstract class Profile{
-	abstract void add(String name,String id) ;
-	abstract String check(String id);
-	
-}
-class Person{
-	String name,id;
-	Person(String n,String i){
-		name = n; id =i;
-	}
-	String getname() {
-		return name;
-	}
-	String getid() {
-		return id;
-	}
-}
-class Per extends Profile{
-	Person ary[];//객체 배열 선언
-	int n;
-	
-	Per(int n){
-		ary = new Person[n];
-		n=0;
-	}
-	public void add(String name,String id) {
-		ary[n] = new Person(name,id);
-		n++;
-	}
-	public String check(String id) {
-		for(int i = 0; i<n; i++) {
-			if(id.compareTo(ary[i].getid())==0) {
-				return ary[i].getname();
-			}
+import javax.swing.JButton;
+import javax.swing.JFrame;
+class Aa implements ActionListener{
+	public void actionPerformed(ActionEvent e) {
+		JButton b=(JButton)e.getSource();
+		if(b.getText().equals("Java")) {
+			b.setText("자바");
 		}
-		return null;
+		//이벤트가 어디에서 발생했는지 알아낸다
+		//getSource메소는 Object 클래스객체이므로
+		//다운캐스팅 해서 알아낸다.
 	}
 }
-public class A02 {
-
-	public static void main(String[] args) {
-		Profile p = new Per(5);
-		p.add("승철", "123");
-		p.add("두희", "345");
-		p.add("주희", "344");
+class A02 extends JFrame {
+	A02() {
+		//
+		Container c = getContentPane();
+		c.setLayout(new FlowLayout());
+		JButton j1 = new JButton("Java");
+		j1.addActionListener(new Aa());
 		
-		System.out.println(p.check("123"));
+		c.add(j1);
+		setVisible(true);
+
+	
+	}
+	public static void main(String[] args) {
+		new A02();
 	}
 }

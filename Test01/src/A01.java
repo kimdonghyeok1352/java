@@ -1,4 +1,12 @@
 import java.util.Scanner;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
 import java.util.InputMismatchException;
 
 /*
@@ -181,7 +189,7 @@ class AThread extends Thread{
 	}
 	public void run() {
 		for(int i=a; i<=b; i++) {
-			sum += i;
+			t.total(i);
 		}
 		System.out.println(sum);
 		
@@ -202,7 +210,7 @@ public class A01 {
 
 	}
 }*/
-abstract class Figure{
+/*abstract class Figure{
 	int a,b;
 	abstract void circle_area();
 	abstract void rec_area();
@@ -235,5 +243,27 @@ public class A01 {
 
 	
 	}
-}
+}*/
+/*
+class A01 extends JFrame {
+	A01() {
+		super("JFrame");
+		Container c = getContentPane();
+		c.setLayout(new GridLayout(3, 3));// 행렬
+		// 프레임안에는 문자열(텍스트)이 기준
+		for (int i = 0; i < 9; i++) {
+			String str = Integer.toString(i);
+			// 기본 정수형을 문자열로 변경
+			JButton j1 = new JButton(str);
+			c.add(j1);
+		}
+		setVisible(true);
+	}
+
 	
+
+	public static void main(String[] args) {
+		new A01();
+	}
+}*/
+
