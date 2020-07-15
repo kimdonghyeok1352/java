@@ -335,7 +335,7 @@ class a20200714 extends JFrame {
 		});
 		c.add(b1);
 		c.add(b2);
-		setSize(50,50);
+		setSize(500,500);
 		setVisible(true);
 	}
 	public static void main(String[] args) {
