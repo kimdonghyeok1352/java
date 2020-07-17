@@ -606,10 +606,7 @@ public class a20200716 {
 	
 
 	public static void main(String[] args) {
-		// 제너릭(모형자) -> 템플릿(모형자)
-		// generic < >(angle blancket라고 불린다)
-		// 컬렉션 프레임 워크(Vector, ArrayList,Map,Set)
-		// 제너릭 클래스,제너릭 메소드
+		
 		St<String> s = new St<String>();
 		s.push("낚시");
 		s.push("cccn");
