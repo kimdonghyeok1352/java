@@ -11,6 +11,7 @@ import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -492,28 +493,71 @@ public class a20200717 {
 		}
 	}
 }
-*/
+
 public class a20200717 {
 	public static void main(String[] args) {
-		HashMap<String, Integer> hm = new HashMap<String,Integer>();
+		HashMap<String, Integer> hm = new HashMap<String, Integer>();
 		hm.put("a", 123);
 		hm.put("b", 456);
 		Scanner n = new Scanner(System.in);
-		while(true) {
+		while (true) {
 			System.out.println("입력");
 			String a = n.next();
-			if(a.equals("a")) {
+			if (a.equals("a")) {
 				System.out.println(hm.get("a"));
-			}
-				else if(a.equals("b")) {
+			} else if (a.equals("b")) {
 				System.out.println(hm.get("b"));
-			}
-				else {
-					System.out.println("잘못입력했네요");
-				}
+			} else {
+				System.out.println("잘못입력했네요");
 			}
 		}
-			
+	}
+
+}
+
+public class a20200717 {
+	public static void main(String[] args) {
+		HashMap<String, Integer> h = new HashMap<String, Integer>();
+		Scanner s = new Scanner(System.in);
+
+		for (int i = 0; i < 3; i++) {
+			String name = s.next();
+			int age = s.nextInt();
+			h.put(name, age);
+		}
+		Set<String> key = h.keySet();
+		Iterator<String> it = key.iterator();
+
+		int max = 0;
+		String str = "";//
+		while (it.hasNext()) {
+			String name = it.next();
+			int age = h.get(name);
+			if (max < age) {
+				max = age;
+				str = name;
+			}
+		}
+		System.out.println(str + " " + max);
+		// 가장 나이가 맣은 사람의 이름 출력
+	}
+}*/
+class Stu{
+	String n;
+	int y;
+	Stu(String n,int y){
+		this.n=n;
+		this.y=y;
 		
-	
+	}
+}
+public class a20200717 {
+	public static void main(String[] args) {
+		Set<Stu> s = new HashSet<Stu>();
+		s.add(new Stu("유성",24));
+		s.add(new Stu("유강",22));
+		s.add(new Stu("유강",22));
+		
+		System.out.println(s.size());
+	}
 }
