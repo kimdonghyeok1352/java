@@ -15,11 +15,13 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeSet;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+
 /*
 class Person {
 	String str;
@@ -122,18 +124,45 @@ public class a0723 {
 		
 	}
 }
-*/	
-public class a0723 {
-	public static void main(String[] args) {
-		Map<Integer, Double> m = new HashMap<Integer,Double>();
-		m.put(2, 3.5);
-		m.put(3, 5.5);
-		m.put(4, 6.5);
-		Set<Map.Entry<Integer, Double>> s = m.entrySet();
-		for(Map.Entry<Integer, Double> m1: s) {//for-each구문
-			System.out.println(m1.getValue());
-			System.out.println(m1.getKey());
-		}
+*/
+class Stu1 implements Comparable<Stu1> {
+
+	String name;
+	int grade;
+
+	Stu1(String name, int grade) {
+		this.name = name;
+		this.grade = grade;
+	}
+
+	void show() {
+		System.out.println(name + " " + grade);
+	}
+
+	public int compareTo(Stu1 t) {
+		if (grade > t.grade)
+			return 1;
+		else if (grade < t.grade)
+			return -1;
+		else
+			return 0;
+	}
+
+	public String toString() {
+		return name + " " + grade;
 	}
 }
-	
+
+public class a0723 {
+	public static void main(String[] args) {
+		TreeSet<Stu1> t = new TreeSet<Stu1>();
+		t.add(new Stu1("미미", 96));
+		t.add(new Stu1("두두", 100));
+		t.add(new Stu1("히히", 50));
+		Iterator<Stu1> it = t.iterator();
+		while (it.hasNext()) {
+			System.out.println(it.next());
+		}
+	}
+
+}
