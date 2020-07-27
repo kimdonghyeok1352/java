@@ -1,0 +1,23 @@
+select sysdate from dual;
+==>오늘날짜
+select sysdate-1 from dual;
+==>어제 날짜
+
+alter session set nls_date_format='mm-dd-yyyy';
+==>날짜형식 바꾸기
+select sysdate from dual;->07-27-2020
+
+select next_day(sysdate,2) from dual;
+==>2:월요일	3:화요일
+   다음 월요일
+<변환 함수>
+1.TO_NUMBER(문자->숫자데이터)
+2.TO_DATE(문자->날짜)
+3.TO_CHAR(숫자,날짜->문자)
+
+select stu_no,stu_height from student where stu_height is null;
+==>널값 찾기
+
+NVL(인수1,인수2)
+:인수 값이 null인지 체크하여 연산이 가능한 값으로 변환하여 반환하는 함수
+:인수 1이 널이면 인수2,널이 아니면 인수1을 반환

@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.StringTokenizer;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -344,21 +345,16 @@ public class a0724 extends JFrame {
 }
 */
 public class a0724 {
-	static int get(int a[][]) {
-		int max=0;
-		for(int i=0; i<2; i++) {
-			for(int j=0; j<3; j++) {
-				if(max<a[i][j]) {
-					max=a[i][j];
-				}
-			}
-		}
-		return max;
-		
-	}
+	
 	public static void main(String[] args) {
-		int score [][] = {{2,3,5},{5,3,7}};
-		int high = get(score);
-		System.out.println("최대값" + high);
+		String p = "1+2+3+4+5";
+		StringTokenizer s = new StringTokenizer(p, "+");
+		int sum = 0;
+		while (s.hasMoreTokens()) {// 반환할 토큰이 남아있는가
+			sum += Integer.parseInt(s.nextToken());
+
+		}
+		System.out.println(sum);
 	}
+
 }
