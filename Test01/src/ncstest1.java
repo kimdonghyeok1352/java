@@ -54,32 +54,35 @@ public class ncstest1 {
 		
 	}
 }
+*/
 
-문제3
-
-class Num{
+class Num {
 	int a;
-	int sum=0;
-	int max=0;
+	int sum = 0;
+	int max = 0;
+
 	void add(int a) {
-		this.a=a;
-		
-		for(int i=0; i<4; i++) {
-			sum+=a;
+		this.a = a;
+
+		for (int i = 0; i < 4; i++) {
+			sum += a;
 		}
-		for(int i=0; i<4; i++) {
-			if(max<a) {
-				max =a;
+		for (int i = 0; i < 4; i++) {
+			if (max < a) {
+				max = a;
 			}
 		}
 	}
+
 	int getSum() {
 		return sum;
 	}
+
 	int getMax() {
 		return max;
 	}
 }
+
 public class ncstest1 {
 
 	public static void main(String[] args) {
@@ -96,6 +99,7 @@ public class ncstest1 {
 		
 	}
 }
+
 /*문제4
 public class ncstest1 {
 
@@ -237,5 +241,3 @@ public class ncstest1 {
 	}
 
 }
-
-
