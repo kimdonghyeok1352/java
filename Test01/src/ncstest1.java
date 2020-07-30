@@ -30,7 +30,7 @@ public class ncstest1 {
 
 
 
-22¹ø
+2¹ø
 class Circle{
 	private double r;
 	Circle(double r){
