@@ -39,19 +39,7 @@ public class reservation2 extends JFrame {
 			ch2.add("부산");
 			c.add(ch2);
 			
-			CheckboxGroup CG = new CheckboxGroup();//왕복,편도선택
-
-			Checkbox  chbox1 = new Checkbox("편도",CG,true);
-
-			Checkbox chbox2 = new Checkbox("왕복",CG,true);
 			
-			c.add(chbox1);
-
-			c.add(chbox2);
-
-			chbox1.setBounds(110,100,50,50);
-
-			chbox2.setBounds(160,100,50,50);
 
 			JButton jb1 = new JButton("날짜조회");//날짜조회 버튼
 			jb1.setBounds(50,180,100,100);
@@ -66,7 +54,7 @@ public class reservation2 extends JFrame {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					Calender cal = new Calender();
-					dispose();
+					
 					
 				}
 			});

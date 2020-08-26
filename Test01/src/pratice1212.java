@@ -232,14 +232,25 @@ public class pratice1212 extends JFrame {
 				
 				@Override
 				public void actionPerformed(ActionEvent e) {//비밀번호 일치하면 확인버튼 누르면 프로그램종료 아닐시는 경고창
-					int a = Integer.parseInt(pw_t.getText());
-					int b = Integer.parseInt(pw_t1.getText());
-					if(a==b) {
-						JOptionPane.showMessageDialog(null, "회원가입 완료");
-						System.exit(0);
+					String a = pw_t.getText();
+					String b = pw_t1.getText();
+					String s="";
+					 
+					
+					if(name_t.getText().equals(s) || birth_t1.getText().equals(s) || birth_t2.getText().equals(s) ||  birth_t3.getText().equals(s) || id_t.getText().equals(s) || email_t.getText().equals(s) || email_t1.getText().equals(s) || phone_t2.getText().equals(s) || phone_t3.getText().equals(s) || tel_t2.getText().equals(s) || tel_t3.getText().equals(s) || u_t.getText().equals(s) || u_t1.getText().equals(s) || ju_t.getText().equals(s)) {
+						JOptionPane.showMessageDialog(null,"모든사항은 필수사항입니다","경고",0);
+					
 					}
 					else {
-						JOptionPane.showMessageDialog(null,"비밀번호가 일치하지 않습니다","경고",0);
+						
+						if(a.equals(b)) {
+							JOptionPane.showMessageDialog(null, "회원가입 완료");
+							Login l = new Login();
+							dispose();
+						}
+						else {
+							JOptionPane.showMessageDialog(null,"비밀번호가 일치하지 않습니다","경고",0);
+						}
 					}
 				}
 			});
