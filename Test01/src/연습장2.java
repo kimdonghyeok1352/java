@@ -75,6 +75,7 @@ public class 연습장2 {
 		Worker3 w = new Worker3(123, "ㅁㅁ", "ㅠㅠ", "22", "1/22");
 		Scanner s = new Scanner(System.in);
 
+		
 		while (true) {
 			System.out.println("<사원 정보 관리 프로그램>");
 			System.out.println("1");

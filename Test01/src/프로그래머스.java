@@ -2,9 +2,10 @@ import java.util.Scanner;
 
 class Solution {
 	int n;
-	String s = "¼ö";
-	String b = "¹Ú";
+	String s = "ï¿½ï¿½";
+	String b = "ï¿½ï¿½";
 	String d = "";
+
 
 	public String solution(int n) {
 		for (int i = 0; i < n; i++) {
@@ -15,10 +16,12 @@ class Solution {
 			}
 		}
 		return d;
+
+	
 	}
 }
 
-public class ÇÁ·Î±×·¡¸Ó½º {
+public class ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½Ó½ï¿½ {
 
 	public static void main(String[] args) {
 		Solution s = new Solution();
